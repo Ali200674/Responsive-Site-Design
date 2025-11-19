@@ -1,0 +1,131 @@
+/* Desktop Design */
+
+
+/* Tablet Design */
+
+@media screen and (min-width: 768px) and (max-width: 960px){
+
+    /* General Styles */
+        body{
+            padding: 20px;
+            display: grid;
+            grid-template-areas:
+            " header header "
+            " main-image main-image "
+            " side main"
+            " side main"
+            " sub-one sub-one "
+            " footer footer"
+            ;
+            gap: 20px;
+        }
+    /* End Of General Styles */
+    
+    /* Header Styles */
+        header{
+            display: flex;
+            grid-area: header;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header ul{
+            display: flex;
+        }
+        header li{
+            list-style-type: none;
+            margin-left: 20px
+        }
+    /* End Of Header Styles */
+        
+    /* Main Image */
+        .main-image{
+            display: flex;
+            grid-area: main-image;
+            justify-content: center;
+            justify-self: stretch;
+            height: 300px;
+            
+        }
+        .main-image img{
+            width: 100%;
+            align-self: stretch;
+        }
+    /* End Of Main Image */
+
+    /* Main Content */
+        main{
+            grid-area: main;
+            font-size: 1.2rem;
+        }  
+        .images{
+            display: flex;
+            justify-content: space-between;
+        }
+        .image{
+            width: 30%;
+        }
+        main div {
+           display: flex;
+        }
+        .sub-sections {
+            display:flex;
+            flex-direction: column;
+        }
+        
+
+        .sub-section-one{
+            grid-area: sub-one;
+            display: flex;
+            
+        } 
+        .sub-section-one .text{
+            display: flex;
+            flex-direction: column;
+        }
+        .sub-section-one img{
+            width: 40%;
+        }
+        .bottom-text{
+            display: flex;
+            flex-direction: column;
+            grid-area: side;
+        }
+        .bottom-text img{
+            width: 100%;
+        }
+    /* End Of Main Content */
+
+    /* Footer Content */
+        footer{
+            grid-area: footer;
+            text-align: center;
+            border: 2px solid gray;
+        }
+    /* End Of Footer Content */
+
+}
+
+
+/* Moblie Design */
+@media screen and (max-width: 768px) {
+
+    /* Header Styles */
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header ul{
+            display: flex;
+        }
+        header li{
+            list-style-type: none;
+            margin-left: 20px
+        }
+
+        .main-image{
+            display: none;
+        }
+    
+
+}
