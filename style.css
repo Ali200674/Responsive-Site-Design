@@ -1,4 +1,120 @@
 /* Desktop Design */
+@media scree and (min-width: 1280px) {
+ 
+    /* General Styles */
+    body{
+        padding: 50px;
+        display: grid;
+        grid-template-areas:
+        " header"
+        " main-image"
+        " main "
+        " side"
+        " footer"
+        ;
+        gap: 20px;
+    }
+
+        
+    /* End Of General Styles */
+    
+    /* Header Styles */
+        header{
+            display: flex;
+            grid-area: header;
+            justify-content: space-between;
+            align-items: center;
+            grid-area: header;
+        }
+        header ul{
+            display: flex;
+        }
+        header li{
+            list-style-type: none;
+            margin-left: 20px
+        }
+    /* End Of Header Styles */
+
+    /* Main Image */
+        .main-image{
+            display: flex;
+            justify-content: center;
+            grid-area: main-image;
+        }
+        .main-image img{
+            width:100%;
+            height: 400px;
+        }
+    /* End Of Main Image */
+
+    /* Main Content */
+        .main-content{
+
+            display:flex;
+            flex-direction: column;
+            grid-area: main;
+            align-items: center;
+            margin-bottom: 80px;
+
+        }
+        
+        .main-content .button{
+            font-size: 1.25rem;
+            color: white;
+            padding: 15px 50px;
+            border-radius: 5px;
+            background-color: rgb(94, 91, 91);
+        }
+        
+
+    /* End Of Main Content */
+
+    /* Side Content */
+
+    main{
+        
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    main .images{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+    }
+    main .side-content{
+        display: flex;
+        gap: 50px;
+        text-align: center;
+    }
+    .bottom-content{
+            text-align: center;
+    }
+
+    /* End Of Side Content */
+
+    /* Footer Content */
+        footer{
+
+            grid-area: footer;
+            text-align: center;
+            width: 100%;
+            border: 2px solid gray;
+        }
+
+    /* End Of Footer Content */
+        
+
+
+
+        
+   
+    
+}
+
 
 
 /* Tablet Design */
@@ -7,7 +123,7 @@
 
     /* General Styles */
         body{
-            padding: 20px;
+            padding: 50px;
             display: grid;
             grid-template-areas:
             " header header "
@@ -17,7 +133,7 @@
             " sub-one sub-one "
             " footer footer"
             ;
-            gap: 20px;
+            gap: 30px;
         }
     /* End Of General Styles */
     
@@ -43,11 +159,10 @@
             grid-area: main-image;
             justify-content: center;
             justify-self: stretch;
-            height: 300px;
             
         }
         .main-image img{
-            width: 100%;
+            width: 500%;
             align-self: stretch;
         }
     /* End Of Main Image */
@@ -57,42 +172,34 @@
             grid-area: main;
             font-size: 1.2rem;
         }  
-        .images{
-            display: flex;
-            justify-content: space-between;
-        }
         .image{
             width: 30%;
         }
-        main div {
+        main .side-content {
            display: flex;
+           
         }
         .sub-sections {
             display:flex;
             flex-direction: column;
         }
+        main .images{
+        gap: 0px;
+        display: flex;
+        justify-content: space-between;
+        }
         
 
-        .sub-section-one{
-            grid-area: sub-one;
-            display: flex;
-            
-        } 
-        .sub-section-one .text{
+        .main-content{
             display: flex;
             flex-direction: column;
-        }
-        .sub-section-one img{
-            width: 40%;
-        }
-        .bottom-text{
-            display: flex;
-            flex-direction: column;
+            text-align: left;
             grid-area: side;
         }
-        .bottom-text img{
+        .main-content img{
             width: 100%;
         }
+
     /* End Of Main Content */
 
     /* Footer Content */
@@ -109,11 +216,26 @@
 /* Moblie Design */
 @media screen and (max-width: 768px) {
 
+    body{
+        display: grid;
+        margin: 20px;
+        grid-template-areas: 
+        "header"
+        "main"
+        "main-text"
+        "side-content"
+        "footer"
+        
+        ;
+
+    }
+
     /* Header Styles */
         header{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            grid-area: header;
         }
         header ul{
             display: flex;
@@ -122,10 +244,71 @@
             list-style-type: none;
             margin-left: 20px
         }
+    /* End Of Header Styles */
 
+    /* Main Image */
         .main-image{
+            display: flex;
+            justify-content: center;
+            margin-bottom:  50px;
+            margin-top: 50px;
+            grid-area: main;
+        }
+        .main-image img{
+            width: 90%;
+        }
+    /* End Of Main Image */
+
+    /* Start Of Main Content */
+        .main-content{
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-area: main-text;
+        }
+
+        .main-content img{
+            width: 70%;
             display: none;
         }
+
+        .button{
+            font-size: 1.25rem;
+            color: white;
+            padding: 15px 50px;
+            border-radius: 5px;
+            background-color: rgb(94, 91, 91);
+        }
+        
+        .images{
+            display: none;
+        }
+
+    /* End Of Main Content */
+
+    /* Side Content */
+
+        .sub-sections, main.bottom-text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-area: side-content
+        }
+
+        .sub-sections, .bottom-content{
+            text-align: center;
+        }
+
+    /* End Of Side Content */
+
+    /* Start Of Footer */
+      footer{
+        grid-area: footer;
+        text-align: center;
+        border: 2px solid gray;
+    }
+    /* End Of Footer */
     
 
 }
